@@ -1,6 +1,6 @@
 {
   "name": "verify-jwt",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a middleware used to verify jwt you just need to pass the jwt token through query params named token are headers named x-access-token",
   "main": "index.js",
   "scripts": {
@@ -14,5 +14,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vamsiaila/verify-jwt.git"
-  }
+  },
+
+  "keywords": [
+    "verify-jwt",
+    "verify jwt",
+    "verify jsonwebtoken",
+    "verify token",
+    "jwt token verification",
+    "jwt token",
+    "vj",
+    "jwt",
+    "jsonwebtoken",
+    "middleware"
+  ]
 }
