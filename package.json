@@ -1,13 +1,13 @@
 {
   "name": "verify-jwt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a middleware used to verify jwt you just need to pass the jwt token through query params named token are headers named x-access-token",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "jsonwebtoken": "^8.4.0"
   },
