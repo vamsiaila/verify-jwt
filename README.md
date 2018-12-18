@@ -1,15 +1,55 @@
 # verify-jwt
 
-verify-jwt is a small middleware for using jwt token verification to protect the routes in a simple way.
+verify-jwt is a middleware used to protect the route handlers from from fake requests
 
-sample code:
+## Getting Started
 
-run > npm i verify-jwt
+install #verify-jwt through npm install and use in the routes as middleware as simple as that
 
-const vj = require('verify-jwt')
+While requesting send the token through 
 
-app.get('/auth',vj.protect('secret'),(req,res)=>{
-// magic goes here
+queryparams with field name token
+```
+http://www.google.com/api?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
+```
+
+or headers with field name x-access-token
+```
+x-access-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
+```
+
+verify-jwt automatically authunticates the token if error it will send valid error response else if success the token payload will be available in the req.user object
+
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+
+```
+npm install verify-jwt
+```
+
+```js
+const vj = require('verify-jwt');
+
+app.get('/auth', vj.protect('secret),(req,res)=>{
+
 })
 
-verify-jwt automatically detects the token available or not and verify the token and sends valid error response if no error your token payload will be saved in req.user object
+```
+
+## Built With
+
+* [jwt](https://jwt.io/) - The web framework used
+* [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) - Dependency Management
+
+
+## Authors
+
+* **Vamsi Aila**
+
+## License
+
+This project is licensed under the MIT License
+
