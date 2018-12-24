@@ -35,6 +35,7 @@ const vj = require('verify-jwt');
 
 app.get('/auth', vj.protect('secret'),(req,res)=>{
     // you can get token payload with req.user object
+    let payload = req.user;
 })
 
 ```
