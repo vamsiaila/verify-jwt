@@ -40,10 +40,6 @@ app.get('/auth', vj.protect('secret'),(req,res)=>{
 
 ```
 
-## Built With
-
-* [jwt](https://jwt.io/) - The web framework used
-* [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) - Dependency Management
 
 
 ## Authors
