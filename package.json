@@ -1,6 +1,6 @@
 {
   "name": "verify-jwt",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "a middleware used to verify jwt you just need to pass the jwt token through query params named token are headers named x-access-token",
   "main": "index.js",
   "scripts": {
